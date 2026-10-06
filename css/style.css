@@ -1,0 +1,64 @@
+body {
+    background: #f7f7f8;
+    color: #1a1a1a;
+}
+
+.page {
+    max-width: 960px;
+    padding-top: 28px;
+    padding-bottom: 48px;
+}
+
+.page-title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.section-card {
+    margin-bottom: 16px;
+    border: 1px solid #e6e6e8;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f3f4f6;
+    font-weight: 700;
+}
+
+.card-toggle-icon {
+    transition: transform 0.2s;
+}
+
+[aria-expanded="false"] .card-toggle-icon {
+    transform: rotate(180deg);
+}
+
+.dt-buttons .btn {
+    background: #4b5563;
+    border-color: #4b5563;
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.dt-buttons .btn:hover,
+.dt-buttons .btn:focus {
+    background: #374151;
+    border-color: #374151;
+    color: #fff;
+}
+
+table.dataTable thead th {
+    font-weight: 600;
+}
+
+.dtrg-group th {
+    background: #eceff3;
+    font-weight: 700;
+}

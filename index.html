@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOREA IMPULSE</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/rowgroup/1.5.1/css/rowGroup.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.1.2/css/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <main class="flex-grow-1">
+        <div class="container page">
+            <h1 class="page-title">KOREA IMPULSE</h1>
+            <!--
+            <div class="card section-card">
+                <div
+                    class="card-header section-header"
+                    role="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#ratioBody"
+                    aria-expanded="true"
+                    aria-controls="ratioBody">
+                    편입비
+                    <i class="bi bi-chevron-up card-toggle-icon"></i>
+                </div>
+                <div class="collapse show" id="ratioBody">
+                    <div class="card-body">
+                        <table class="table table-bordered w-100" id="ratioTable">
+                            <thead>
+                                <tr>
+                                    <th>일자</th>
+                                    <th>정렬</th>
+                                    <th>ticker</th>
+                                    <th>종목명</th>
+                                    <th class="text-end">편입비</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            -->
+            <div class="card section-card">
+                <div class="card-header section-header">평가액 차트</div>
+                <div class="card-body">
+                    <canvas id="impulseChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card section-card">
+                <div
+                    class="card-header section-header"
+                    role="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#dailyBody"
+                    aria-expanded="true"
+                    aria-controls="dailyBody">
+                    데일리 평가액
+                    <i class="bi bi-chevron-up card-toggle-icon"></i>
+                </div>
+                <div class="collapse show" id="dailyBody">
+                    <div class="card-body">
+                        <table class="table table-bordered w-100" id="dailyTable">
+                            <thead>
+                                <tr>
+                                    <th>일자</th>
+                                    <th class="text-end">IMPULSE</th>
+                                    <th class="text-end">KOSPI</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/rowgroup/1.5.1/js/dataTables.rowGroup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.1.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.html5.min.js"></script>
+    <script src="js/impulse.js"></script>
+</body>
+</html>
