@@ -62,3 +62,8 @@ table.dataTable thead th {
     background: #eceff3;
     font-weight: 700;
 }
+
+.tv-chart {
+    width: 100%;
+    height: 420px;
+}

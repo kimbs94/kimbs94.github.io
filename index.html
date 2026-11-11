@@ -50,7 +50,14 @@
             <div class="card section-card">
                 <div class="card-header section-header">평가액 차트</div>
                 <div class="card-body">
-                    <canvas id="impulseChart"></canvas>
+                    <div class="tv-legend mb-2 small"></div>
+                    <div class="position-relative">
+                        <div id="impulseChart" class="tv-chart"></div>
+                        <div class="tv-tooltip position-absolute border bg-white small p-2 shadow-sm" style="display: none; z-index: 2; pointer-events: none;"></div>
+                    </div>
+                    <div class="text-end mt-1">
+                        <a href="https://www.tradingview.com/" target="_blank" rel="noopener noreferrer" class="small text-secondary">Charts by TradingView</a>
+                    </div>
                 </div>
             </div>
 
@@ -86,7 +93,8 @@
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@5.1.0/dist/lightweight-charts.standalone.production.js"></script>
+    <script src="js/tvChart.js"></script>
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.datatables.net/rowgroup/1.5.1/js/dataTables.rowGroup.min.js"></script>

@@ -105,50 +105,20 @@ var IMPULSE = {};
         },
         drawChart: function () {
             var chart_data = pri.chart_data;
-            var labels = chart_data.map(function (item) { return item.Date; });
-            var benchmark = chart_data.map(function (item) { return item.benchmark; });
-            var nav = chart_data.map(function (item) { return item.nav; });
-            var ctx = document.getElementById("impulseChart").getContext("2d");
-
-            if (pri.chart) {
-                pri.chart.destroy();
-            }
-
-            pri.chart = new Chart(ctx, {
-                type: "line",
-                data: {
-                    labels: labels,
-                    datasets: [
-                        {
-                            label: "KOSPI",
-                            data: benchmark,
-                            fill: false,
-                            pointStyle: false,
-                            borderColor: "#87CEEB",
-                            backgroundColor: "#87CEEB"
-                        },
-                        {
-                            label: "IMPULSE",
-                            data: nav,
-                            fill: false,
-                            pointStyle: false,
-                            borderColor: "#000000",
-                            backgroundColor: "#000000"
-                        }
-                    ]
-                },
-                options: {
-                    interaction: {
-                        mode: "index",
-                        intersect: false
+            TvCharts.draw(document.getElementById("impulseChart"), {
+                labels: chart_data.map(function (item) { return item.Date; }),
+                datasets: [
+                    {
+                        label: "KOSPI",
+                        borderColor: "#87CEEB",
+                        data: chart_data.map(function (item) { return item.benchmark; })
                     },
-                    plugins: {
-                        tooltip: {
-                            mode: "index",
-                            intersect: false
-                        }
+                    {
+                        label: "IMPULSE",
+                        borderColor: "#000000",
+                        data: chart_data.map(function (item) { return item.nav; })
                     }
-                }
+                ]
             });
         },
         dailyTable: function () {
