@@ -114,9 +114,14 @@ var IMPULSE = {};
                         data: chart_data.map(function (item) { return item.benchmark; })
                     },
                     {
-                        label: "IMPULSE",
+                        label: "IMPULSE 주간",
                         borderColor: "#000000",
                         data: chart_data.map(function (item) { return item.nav; })
+                    },
+                    {
+                        label: "IMPULSE 일간",
+                        borderColor: "#E07A3D",
+                        data: chart_data.map(function (item) { return item.daily_nav; })
                     }
                 ]
             });
@@ -143,6 +148,7 @@ var IMPULSE = {};
                 columns: [
                     { data: "Date" },
                     { data: "nav", className: "text-end", render: money },
+                    { data: "daily_nav", className: "text-end", render: money },
                     { data: "benchmark", className: "text-end", render: money }
                 ]
             });
